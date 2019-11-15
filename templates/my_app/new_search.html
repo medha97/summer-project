@@ -2,50 +2,19 @@
 
 {% block content %}
   <h2 style="text-align: center">{{ search | title}}</h2>
-
-
   <div class="row ">
+  {% for post in final_postings %}
     <div class="col s4">
       <div class="card small">
         <div class="card-image">
-          <img src="/">
-        </div>
-        <div class="card-content">
-          <p></p>
+          <a href="{{ post.1 }}"><img src="https://www.google.com/search?q=cute+puppy&rlz=1C1CHBF_enIN860IN860&sxsrf=ACYBGNTBepJh2v_AIvgQmWLLHkSm7AroLg:1573844852878&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjFsYz79OzlAhWSzzgGHW5EBcsQ_AUIEigB#imgrc=fob80O8cJcZJjM:"></a>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <a href="{{ post.1 }}"> {{ post.0 }}</a>
         </div>
       </div>
     </div>
-
-    <div class="col s4">
-      <div class="card small">
-        <div class="card-image">
-          <img src="/">
-        </div>
-        <div class="card-content">
-          <p>View listing: Price TEST PRICE</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col s4">
-      <div class="card small">
-        <div class="card-image">
-          <img src="/">
-        </div>
-        <div class="card-content">
-          <p></p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
-      </div>
-    </div>
+  {% endfor %}
   </div>
 
 {% endblock %}
